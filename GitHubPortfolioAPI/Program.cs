@@ -2,6 +2,8 @@ using GitHubServiceLibrary;
 
 var builder = WebApplication.CreateBuilder(args);
 
+
+var folderPath = builder.Configuration["folderPath"];
 // Add services to the container.
 builder.Services.Configure<GitHubOptions>(builder.Configuration.GetSection("GitHubOptions"));
 builder.Services.AddMemoryCache();
